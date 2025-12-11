@@ -5,7 +5,7 @@ This repository contains my structured solutions to the LeetCode Top 150 Intervi
 The goal is consistency, clean implementation, and optimized problem-solving using C++ (or Python if added).
 Each solution includes:
 
-Problem description
+  **Problem description
 
 Approach summary
 

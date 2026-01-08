@@ -1,0 +1,22 @@
+class Solution {
+public:
+bool ok(string& a, string& b, int i){
+    int j=0;
+    while(j<b.size() && a[i]==b[j]){
+        j++;i++;
+    }
+    if(j==b.size()){
+        return true;
+    }
+    else return false;
+}
+    int strStr(string haystack, string needle) {
+        for(int i=0;i<haystack.size();i++){
+            if(ok(haystack,needle,i)){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
+};

@@ -1,0 +1,36 @@
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        int count[26] = {0};
+    
+    // Count letters in magazine
+    for (char c : magazine) {
+        count[c - 'a']++;
+    }
+    
+    // Check letters in ransomNote
+    for (char c : ransomNote) {
+        if (count[c - 'a'] == 0) {
+            return false; // Not enough letters
+        }
+        count[c - 'a']--;
+    }
+    
+    return true;
+}
+
+int main() {
+    string ransomNote = "aa";
+    string magazine = "aab";
+    
+    if (canConstruct(ransomNote, magazine))
+        cout << "True\n";
+    else
+        cout << "False\n";
+    
+    return 0;
+}
+
+        
+    
+};
